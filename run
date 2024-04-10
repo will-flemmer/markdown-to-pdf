@@ -1,0 +1,6 @@
+#!/bin/sh
+
+docker run $(docker build -q .) --url=$2
+
+CONTAINER_ID=$(docker ps -alq)
+docker cp $CONTAINER_ID:/app/temp.pdf $1
