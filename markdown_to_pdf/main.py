@@ -5,6 +5,8 @@ import requests
 
 def markdown_to_pdf(md_text):
     html = markdown.markdown(md_text)
+    with open("temp.html", "w") as file:
+      file.write(html)
     pdfkit.from_string(html, "temp.pdf")
 
 def main():

@@ -1,4 +1,4 @@
-### Docker image that takes a path to a markdown file and converts it to a pdf
+### Docker image that takes a url to a markdown file and creates a pdf and html file
 
 ### Usage
-./run output_path url_with_markdown
+./run url_with_markdown

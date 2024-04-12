@@ -1,6 +1,7 @@
 #!/bin/sh
 
-docker run $(docker build -q .) --url=$2
+docker run $(docker build -q .) --url=$1
 
 CONTAINER_ID=$(docker ps -alq)
-docker cp $CONTAINER_ID:/app/temp.pdf $1
+docker cp $CONTAINER_ID:/app/temp.pdf temp.pdf
+docker cp $CONTAINER_ID:/app/temp.html temp.html
